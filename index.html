@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>One Day Caffe | Dijital Menü</title>
+    <meta name="description"
+        content="One Day Caffe dijital menüsünü keşfedin. Kahveler, tatlılar, yemekler, içecekler ve özel lezzetler.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="One Day Caffe">
+    <meta name="theme-color" content="#130b07">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="One Day Caffe">
+    <meta property="og:title" content="One Day Caffe | Dijital Menü">
+    <meta property="og:description" content="One Day Caffe menüsünü keşfedin.">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:image" content="images/banner/banner.jpg">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#mainContent">İçeriğe geç</a>
+
+    <div class="app" id="app">
+        <header class="site-header" id="top">
+            <div class="container header-inner">
+                <a class="brand" href="#top" aria-label="One Day Caffe ana sayfa">
+                    <span class="brand-icon" aria-hidden="true">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </span>
+                    <span class="brand-content">
+                        <span class="brand-name">ONE DAY</span>
+                        <span class="brand-rule" aria-hidden="true"></span>
+                        <span class="brand-subtitle">CAFFE</span>
+                    </span>
+                </a>
+
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Tema değiştir"
+                    aria-pressed="false">
+                    <span class="theme-toggle-icon theme-toggle-icon-light" aria-hidden="true">
+                        <i class="fa-solid fa-sun"></i>
+                    </span>
+                    <span class="theme-toggle-separator" aria-hidden="true"></span>
+                    <span class="theme-toggle-icon theme-toggle-icon-dark" aria-hidden="true">
+                        <i class="fa-solid fa-moon"></i>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <main id="mainContent" tabindex="-1">
+            <section class="hero" id="hero" aria-labelledby="heroTitle">
+                <div class="hero-media" data-image-holder aria-hidden="true">
+                    <img class="hero-image" id="heroImage" src="images/banner/banner.jpg" alt="" width="1920"
+                        height="900" fetchpriority="high" decoding="async" data-safe-image>
+                    <span class="hero-image-fallback" aria-hidden="true">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                    </span>
+                </div>
+                <div class="hero-overlay" aria-hidden="true"></div>
+
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="hero-kicker">
+                            <span aria-hidden="true"></span>
+                            ONE DAY CAFFE
+                            <span aria-hidden="true"></span>
+                        </span>
+                        <h1 id="heroTitle">
+                            <span>Menülerimize</span>
+                            <span>Hoş Geldiniz</span>
+                        </h1>
+                        <p class="hero-description">
+                            Lezzetin ve kahvenin en özel halini keşfetmeye hazır mısınız?
+                        </p>
+                        <a class="menu-button" id="menuButton" href="#categories" aria-label="Menümüzü görüntüle">
+                            <span>MENÜMÜZ</span>
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="categories-section" id="categories" aria-labelledby="categoriesTitle">
+                <div class="container">
+                    <header class="section-heading">
+                        <div class="section-decoration" aria-hidden="true">
+                            <span></span>
+                            <i class="fa-solid fa-clover"></i>
+                            <span></span>
+                        </div>
+                        <h2 id="categoriesTitle">KATEGORİLER</h2>
+                        <div class="section-decoration section-decoration-bottom" aria-hidden="true">
+                            <span></span>
+                            <i class="fa-solid fa-clover"></i>
+                            <span></span>
+                        </div>
+                    </header>
+
+                    <div class="categories-grid" id="categoriesGrid" aria-live="polite" aria-busy="true"></div>
+
+                    <div class="categories-state" id="categoriesState" hidden>
+                        <div class="categories-state-icon" aria-hidden="true">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <h3>Menü yüklenemedi</h3>
+                        <p>Menü kategorileri şu anda görüntülenemiyor.</p>
+                        <button class="retry-button" id="retryCategories" type="button">
+                            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                            Tekrar Dene
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+            aria-describedby="modalDescription" aria-hidden="true">
+            <div class="modal-backdrop" data-modal-close aria-hidden="true"></div>
+
+            <div class="modal-container" role="document">
+                <header class="modal-header">
+                    <div class="modal-heading">
+                        <span class="modal-category-icon" id="modalCategoryIcon" aria-hidden="true">
+                            <i class="fa-solid fa-utensils"></i>
+                        </span>
+                        <div>
+                            <span class="modal-kicker">ONE DAY CAFFE</span>
+                            <h2 id="modalTitle">Kategori</h2>
+                            <p id="modalDescription" class="modal-description">Ürünler</p>
+                        </div>
+                    </div>
+
+                    <button class="modal-close" id="modalClose" type="button" data-modal-close aria-label="Menüyü kapat">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                </header>
+
+                <div class="modal-body" id="modalProducts"></div>
+
+                <div class="modal-loading" id="modalLoading" hidden aria-live="polite">
+                    <span class="loading-spinner" aria-hidden="true"></span>
+                    Menü hazırlanıyor...
+                </div>
+
+                <div class="modal-empty" id="modalEmpty" hidden>
+                    <div class="modal-empty-icon" aria-hidden="true">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3>Henüz ürün bulunmuyor</h3>
+                    <p>Bu kategoride gösterilecek ürün bulunamadı.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-decoration" aria-hidden="true">
+                    <span></span>
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <span></span>
+                </div>
+                <p><strong>ONE DAY CAFFE</strong> | apextsof yazılım tüm hakları saklıdır.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/categories.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>
